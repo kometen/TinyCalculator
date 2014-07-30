@@ -54,13 +54,13 @@
                                     <action selector="enterNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yZI-GX-Tcm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmY-yi-cqe">
-                                <rect key="frame" x="105" y="183" width="79" height="30"/>
-                                <state key="normal" title="Ny omgang">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmY-yi-cqe">
+                                <rect key="frame" x="105" y="183" width="45" height="30"/>
+                                <state key="normal" title="Ny omgang" image="daily-md">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="resetNumbers:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="57k-7e-i0E"/>
+                                    <action selector="resetNumbers:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yuY-CZ-sSr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0E-LG-HO9">
@@ -69,8 +69,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daily-md" translatesAutoresizingMaskIntoConstraints="NO" id="WTU-8S-84Y">
+                                <rect key="frame" x="206" y="184" width="30" height="29"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="WTU-8S-84Y"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Tiny Calculator" id="9kd-7K-Erb"/>
                     <connections>
@@ -103,4 +111,7 @@
             <point key="canvasLocation" x="347" y="349"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="daily-md" width="297" height="299"/>
+    </resources>
 </document>

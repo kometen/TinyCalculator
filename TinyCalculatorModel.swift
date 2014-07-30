@@ -19,6 +19,7 @@ class TinyCalculatorModel {
         self.max = max
         a = Int(arc4random_uniform(UInt32(max))) + 1
         b = Int(arc4random_uniform(UInt32(max))) + 1
+        if a < b { swap(&a, b: &b) }
     }
     
     func checkResult() {
@@ -28,4 +29,11 @@ class TinyCalculatorModel {
             msg = "Prøv igen"
         }
     }
+    
+    func swap(inout a: Int, inout b: Int) {
+        var tmp = a
+        a = b
+        b = tmp
+    }
+
 }

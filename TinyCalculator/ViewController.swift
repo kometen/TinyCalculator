@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         tcalc.c = c.text.bridgeToObjectiveC().integerValue
         tcalc.checkResult()
         msg.text = tcalc.msg
-//        println(tcalc.msg)
     }
     
     @IBAction func resetNumbers(sender : AnyObject) {
@@ -29,13 +28,12 @@ class ViewController: UIViewController {
         var oldB = tcalc.b
         do {
             tcalc = TinyCalculatorModel(min: 1, max: 9)
-        } while ((oldA == tcalc.a || oldB == tcalc.b) && (tcalc.a != tcalc.b))
+        } while (oldA == tcalc.a || oldB == tcalc.b)
         msg.text = ""
         refreshUI()
     }
 
     func refreshUI() {
-        if tcalc.a < tcalc.b { swap(&tcalc.a, b: &tcalc.b) }
         a.text = String(format: "%2i", tcalc.a);
         b.text = String(format: "%2i", tcalc.b);
         c.text = ""
@@ -43,8 +41,8 @@ class ViewController: UIViewController {
     
     func swap(inout a: Int, inout b: Int) {
         var tmp = a
-        b = a
-        a = tmp
+        a = b
+        b = tmp
     }
     
     override func viewDidLoad() {
