@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var a : UILabel!
-    @IBOutlet var b : UILabel!
-    @IBOutlet var c : UITextField!
-    @IBOutlet var msg : UILabel!
+    @IBOutlet var a: UILabel!
+    @IBOutlet var b: UILabel!
+    @IBOutlet var c: UITextField!
+    @IBOutlet var msg: UILabel!
+    @IBOutlet var feedbackIcon: UIImageView!
+    @IBOutlet var retryButton: UIButton!
     
     var tcalc = TinyCalculatorModel(min: 1, max: 9)
 
@@ -21,6 +23,7 @@ class ViewController: UIViewController {
         tcalc.c = c.text.bridgeToObjectiveC().integerValue
         tcalc.checkResult()
         msg.text = tcalc.msg
+        feedbackIcon.image = tcalc.icon
     }
     
     @IBAction func resetNumbers(sender : AnyObject) {
@@ -29,7 +32,6 @@ class ViewController: UIViewController {
         do {
             tcalc = TinyCalculatorModel(min: 1, max: 9)
         } while (oldA == tcalc.a || oldB == tcalc.b)
-        msg.text = ""
         refreshUI()
     }
 
@@ -37,12 +39,9 @@ class ViewController: UIViewController {
         a.text = String(format: "%2i", tcalc.a);
         b.text = String(format: "%2i", tcalc.b);
         c.text = ""
-    }
-    
-    func swap(inout a: Int, inout b: Int) {
-        var tmp = a
-        a = b
-        b = tmp
+        msg.text = ""
+        feedbackIcon.image = nil
+        retryButton.enabled = false
     }
     
     override func viewDidLoad() {

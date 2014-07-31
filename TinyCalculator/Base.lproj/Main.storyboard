@@ -45,18 +45,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVn-kD-kyb">
-                                <rect key="frame" x="246" y="84" width="30" height="30"/>
-                                <state key="normal" title="Gæt">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVn-kD-kyb">
+                                <rect key="frame" x="240" y="72" width="32" height="53"/>
+                                <state key="normal" title="Gæt" image="1206576288878508735yves_guillou_question.svg.med">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="enterNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yZI-GX-Tcm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmY-yi-cqe">
-                                <rect key="frame" x="105" y="183" width="45" height="30"/>
-                                <state key="normal" title="Ny omgang" image="daily-md">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmY-yi-cqe">
+                                <rect key="frame" x="97" y="167" width="53" height="39"/>
+                                <state key="normal" title="Ny omgang" image="11949990381809984232redo.svg.med">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -69,6 +69,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1206574733930851359Ryan_Taylor_Green_Tick.svg.med" translatesAutoresizingMaskIntoConstraints="NO" id="7op-Nt-TAU">
+                                <rect key="frame" x="230" y="153" width="53" height="53"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daily-md" translatesAutoresizingMaskIntoConstraints="NO" id="WTU-8S-84Y">
                                 <rect key="frame" x="206" y="184" width="30" height="29"/>
                             </imageView>
@@ -85,7 +88,9 @@
                         <outlet property="a" destination="G3f-FP-Vvw" id="uXy-B5-dC3"/>
                         <outlet property="b" destination="yKn-1u-leS" id="Jsp-cG-f9K"/>
                         <outlet property="c" destination="UJZ-DQ-JYN" id="AXC-zu-W61"/>
+                        <outlet property="feedbackIcon" destination="7op-Nt-TAU" id="GC8-jV-6fX"/>
                         <outlet property="msg" destination="U0E-LG-HO9" id="6Ng-5o-M6f"/>
+                        <outlet property="retryButton" destination="jmY-yi-cqe" id="lcQ-mW-T5v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -112,6 +117,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="11949990381809984232redo.svg.med" width="291" height="298"/>
+        <image name="1206574733930851359Ryan_Taylor_Green_Tick.svg.med" width="258" height="297"/>
+        <image name="1206576288878508735yves_guillou_question.svg.med" width="138" height="296"/>
         <image name="daily-md" width="297" height="299"/>
     </resources>
 </document>
