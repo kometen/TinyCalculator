@@ -54,13 +54,13 @@
                                     <action selector="enterNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yZI-GX-Tcm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmY-yi-cqe">
-                                <rect key="frame" x="97" y="167" width="53" height="39"/>
-                                <state key="normal" title="Ny omgang" image="11949990381809984232redo.svg.med">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apd-xL-TNR">
+                                <rect key="frame" x="110" y="170" width="40" height="36"/>
+                                <state key="normal" image="daily-md">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="resetNumbers:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yuY-CZ-sSr"/>
+                                    <action selector="resetNumbers:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ejo-Ds-geD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0E-LG-HO9">
@@ -90,7 +90,7 @@
                         <outlet property="c" destination="UJZ-DQ-JYN" id="AXC-zu-W61"/>
                         <outlet property="feedbackIcon" destination="7op-Nt-TAU" id="GC8-jV-6fX"/>
                         <outlet property="msg" destination="U0E-LG-HO9" id="6Ng-5o-M6f"/>
-                        <outlet property="retryButton" destination="jmY-yi-cqe" id="lcQ-mW-T5v"/>
+                        <outlet property="retryButton" destination="apd-xL-TNR" id="Dev-Jv-kmQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -117,7 +117,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="11949990381809984232redo.svg.med" width="291" height="298"/>
         <image name="1206574733930851359Ryan_Taylor_Green_Tick.svg.med" width="258" height="297"/>
         <image name="1206576288878508735yves_guillou_question.svg.med" width="138" height="296"/>
         <image name="daily-md" width="297" height="299"/>

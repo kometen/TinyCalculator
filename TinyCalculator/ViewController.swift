@@ -22,8 +22,9 @@ class ViewController: UIViewController {
     @IBAction func enterNumber(sender : AnyObject) {
         tcalc.c = c.text.bridgeToObjectiveC().integerValue
         tcalc.checkResult()
-        msg.text = tcalc.msg
+//        msg.text = tcalc.msg
         feedbackIcon.image = tcalc.icon
+        retryButton.enabled = tcalc.enableRetryButton
     }
     
     @IBAction func resetNumbers(sender : AnyObject) {
@@ -41,14 +42,16 @@ class ViewController: UIViewController {
         c.text = ""
         msg.text = ""
         feedbackIcon.image = nil
-        retryButton.enabled = false
+        retryButton.enabled = tcalc.enableRetryButton
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         c.becomeFirstResponder()
-        refreshUI();
+        retryButton.setImage(UIImage(named: "Solid_white"), forState: UIControlState.Disabled)
+        retryButton.setImage(UIImage(named: "daily-md"), forState: UIControlState.Normal)
+        refreshUI()
     }
 
     override func didReceiveMemoryWarning() {
