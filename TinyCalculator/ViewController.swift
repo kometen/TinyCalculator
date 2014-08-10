@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var tcalc = TinyCalculatorModel(min: 1, max: 9)
 
     @IBAction func enterNumber(sender : AnyObject) {
-        tcalc.c = c.text.bridgeToObjectiveC().integerValue
+        tcalc.c = c.text.toInt()!
         tcalc.checkResult()
 //        msg.text = tcalc.msg
         feedbackIcon.image = tcalc.icon
