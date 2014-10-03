@@ -16,9 +16,9 @@ class TinyCalculatorModel {
     var msg: String = ""
     var icon: UIImage = UIImage()
     var enableRetryButton: Bool = false
-    let correctIcon: UIImage = UIImage(named: "1206574733930851359Ryan_Taylor_Green_Tick.svg.med")
-    let incorrectIconRed: UIImage = UIImage(named: "1195436930767206781not_ok_mark_h_kon_l_vdal_01.svg.med")
-    let incorrectIconOrange: UIImage = UIImage(named: "orange-cross-md")
+    let correctIcon: UIImage = UIImage(named: "1206574733930851359Ryan_Taylor_Green_Tick.svg.med")!
+    let incorrectIconRed: UIImage = UIImage(named: "1195436930767206781not_ok_mark_h_kon_l_vdal_01.svg.med")!
+    let incorrectIconOrange: UIImage = UIImage(named: "orange-cross-md")!
     
     init(min: Int, max: Int) {
         self.min = min
